@@ -10,3 +10,9 @@ User.create!(email: "example@exam.org",
              name:  "Example User",
              password:              "password",
              password_confirmation: "password", admin: "true")
+Genre.create(name: "Фантастика")
+Genre.create(name: "Приключения")
+Genre.create(name: "Образование")
+Genre.create(name: "Детективы")
+Genre.create(name: "История")
+Genre.create(name: "Политика")
