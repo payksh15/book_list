@@ -1,0 +1,27 @@
+<p>
+  <strong>Обложка</strong>
+  <%= image_tag @book.image.url(:medium) %>
+</p>
+
+<p>
+  <strong>Название</strong>
+  <%= @book.title %>
+</p>
+
+<p>
+  <strong>Описание:</strong>
+  <%= @book.description %>
+</p>
+
+<!--<p>-->
+  <!--<strong>Image url:</strong>-->
+  <!--<%= '@product.image_url' %>-->
+<!--</p>-->
+
+<p>
+  <strong>Жанр:</strong>
+  <%= @book.genres.map(&:name).sort.join(", ") %>
+</p>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', root_path %>

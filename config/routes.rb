@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
 
   match '/users_index', to: 'users#index',     via: 'get'
-
+  patch "books/update" => "books#update", :as => "books/update"
   resources :sessions
   resources :users
   resources :books

@@ -9,6 +9,8 @@
             <dd><%= truncate(strip_tags(book.description),
                              length: 80) %></dd>
           </dl>
+
+          <%= image_tag book.image.url(:medium) %>
         </td>
         <td class="list_actions">
           <%= link_to 'Просмотреть', book %><br/>

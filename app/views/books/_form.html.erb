@@ -25,6 +25,11 @@
       <%= f.text_area :description, class: 'form-control' %>
     </div>
 
+    <div>
+      <%= f.label :title, 'Обложка' %>
+      <%= f.file_field :image %><br />
+    </div>
+
     <div class="field">
       <%= f.label "Жанры" %><br />
       <%= f.collection_check_boxes :genre_ids, Genre.all, :id, :name do |b| %>
@@ -36,6 +41,6 @@
     </div>
 
     <div class="action">
-      <%= submit_tag 'Cоздать', class: 'btn btn-success' %>
+      <%= submit_tag @book.new_record? ? 'Cоздать' : 'Сохранить', class: 'btn btn-success' %>
     </div>
 <% end %>

@@ -20,6 +20,20 @@ class BooksController < ApplicationController
     end
   end
 
+  def edit
+    @book = current_user.books.find(params[:id])
+  end
+
+  def update
+    book = current_user.books.find(params[:id])
+    book.update(book_params)
+    redirect_to root_path, notice: 'Книга обновлена'
+  end
+
+  def show
+    @book = Book.find(params[:id])
+  end
+
   def destroy
     Book.find(params[:id]).destroy
     flash[:success] = "Книга удалена"
@@ -29,6 +43,6 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:title, :author, :description, genre_ids:[])
+    params.require(:book).permit(:title, :author, :description, :image, genre_ids:[])
   end
 end
