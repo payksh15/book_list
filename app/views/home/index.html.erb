@@ -1,0 +1,30 @@
+<h1>Последние книги</h1>
+<table>
+  <% @books.each do |book| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+        <% if book.blacks == 'false' %>
+        <td class="list_description">
+          <dl>
+            <dt><%= book.title %></dt>
+            <dd><%= truncate(strip_tags(book.description),
+                             length: 80) %></dd>
+          </dl>
+        </td>
+        <td class="list_actions">
+          <%= link_to 'Просмотреть', book %><br/>
+          <%= link_to 'Редактировать', edit_book_path(book) %><br/>
+          <%= link_to 'Удалить', book, method: :delete,
+                      data: { confirm: 'Are you sure?' } %><br/>
+          <% if book.user == current_user %>
+          <%= link_to 'В черновик', books_path(view: 'add', id: book.id) %>
+          <% else %>
+
+          <% end %>
+        </td>
+        <% else %>
+
+        <% end %>
+      </tr>
+  <% end %>
+</table>
+<br />

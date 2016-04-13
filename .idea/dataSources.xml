@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3872478845">
+    <data-source source="LOCAL" name="Rails bool_list: development" uuid="03740559-3a25-48b5-9bb4-d9b62f7ab3ca">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/bool_list_development</jdbc-url>
+      <user-name>kevin</user-name>
+      <user-password>dfc1dfcfdfdcdfc3dfc4</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails bool_list: test" uuid="64af2489-d647-4488-a086-7c2375cbbce2">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/bool_list_test</jdbc-url>
+      <user-name>kevin</user-name>
+      <user-password>dfc1dfcfdfdcdfc3dfc4</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails bool_list: production" uuid="7d0c8c29-7320-48f8-928b-4e8b77f3e385">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/bool_list_production</jdbc-url>
+      <user-name>kevin</user-name>
+      <user-password>dfc1dfcfdfdcdfc3dfc4</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

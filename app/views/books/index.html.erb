@@ -1,0 +1,23 @@
+<h1>Черновики</h1>
+<table>
+  <% @books.each do |book| %>
+      <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
+
+        <td class="list_description">
+          <dl>
+            <dt><%= book.title %></dt>
+            <dd><%= truncate(strip_tags(book.description),
+                             length: 80) %></dd>
+          </dl>
+        </td>
+        <td class="list_actions">
+          <%= link_to 'Посмотреть', book %><br/>
+          <%= link_to 'Изменить', edit_book_path(book) %><br/>
+          <%= link_to 'Удалить', book, method: :delete,
+                      data: { confirm: 'Are you sure?' } %><br/>
+         <%= link_to 'На полку', books_path(view: 'dell', id: book.id) %>
+        </td>
+      </tr>
+  <% end %>
+</table>
+<br />

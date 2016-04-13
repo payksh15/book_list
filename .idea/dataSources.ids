@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails bool_list: development" uuid="03740559-3a25-48b5-9bb4-d9b62f7ab3ca">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails bool_list: test" uuid="64af2489-d647-4488-a086-7c2375cbbce2">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails bool_list: production" uuid="7d0c8c29-7320-48f8-928b-4e8b77f3e385">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

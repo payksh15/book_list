@@ -1,0 +1,20 @@
+<h2>Все пользователи</h2>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Имя</th>
+    <th>Действие</th>
+  </tr>
+  </thead>
+  <% @users.each do |user| %>
+      <% if admin?(user) %>
+
+      <% else %>
+          <tr>
+            <td><%= user.name %></td>
+            <td><%= link_to 'Удалить', user, method: :delete, data: { confirm: 'Вы уверенны?' } %></td>
+          </tr>
+      <% end %>
+  <% end %>
+</table>
